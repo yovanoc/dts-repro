@@ -1,0 +1,33 @@
+{
+  "name": "dts-repro",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "build": "turbo build",
+    "build:packages": "pnpm build --filter=./packages/**/*",
+    "clean": "turbo clean && rm -rf node_modules",
+    "db:push": "turbo db:push",
+    "db:seed": "turbo db:seed",
+    "check": "turbo check",
+    "typecheck": "turbo typecheck",
+    "dev": "turbo dev --no-cache --continue",
+    "format": "turbo format --continue",
+    "format:fix": "turbo format:fix --continue",
+    "lint": "turbo lint --continue",
+    "lint:fix": "turbo lint:fix --continue",
+    "test": "turbo test"
+  },
+  "devDependencies": {
+    "@dts-repro/prettier": "workspace:*",
+    "eslint": "^8.52.0",
+    "eslint-config-custom": "workspace:*",
+    "prettier": "^3.0.3",
+    "tsx": "^3.14.0",
+    "turbo": "1.10.16"
+  },
+  "packageManager": "pnpm@8.9.2",
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

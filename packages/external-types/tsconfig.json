@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "baseUrl": "./src",
+    "tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json",
+    "composite": true
+  },
+  "exclude": ["node_modules"],
+  "extends": "@dts-repro/tsconfig/node-next.json",
+  "include": ["src"]
+}

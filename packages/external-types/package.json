@@ -1,0 +1,53 @@
+{
+  "name": "@dts-repro/external-types",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    },
+    "./dist/*": {
+      "import": {
+        "types": "./dist/*.d.ts",
+        "default": "./dist/*.js"
+      }
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf .turbo node_modules dist",
+    "dev": "tsc --watch",
+    "format": "prettier . --check --cache --cache-location='node_modules/.cache/.prettiercache'",
+    "format:fix": "prettier . --write --cache --cache-location='node_modules/.cache/.prettiercache' --log-level=warn",
+    "lint": "cross-env TIMING=1 eslint . --cache --cache-location 'node_modules/.cache/.eslintcache' --report-unused-disable-directives --max-warnings 20",
+    "lint:fix": "cross-env TIMING=1 eslint . --fix --cache --cache-location 'node_modules/.cache/.eslintcache' --report-unused-disable-directives --max-warnings 20",
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --detectOpenHandles",
+    "typecheck": "tsc --noEmit"
+  },
+  "jest": {
+    "preset": "jest-presets/jest/node"
+  },
+  "devDependencies": {
+    "@dts-repro/prettier": "workspace:*",
+    "@dts-repro/tsconfig": "workspace:*",
+    "@jest/globals": "^29.6.4",
+    "@types/node": "^20.8.7",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.52.0",
+    "eslint-config-custom": "workspace:*",
+    "jest": "^29.7.0",
+    "jest-presets": "workspace:*",
+    "prettier": "3.0.3",
+    "typescript": "5.2.2"
+  }
+}

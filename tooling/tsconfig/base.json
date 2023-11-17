@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Default",
+  "compilerOptions": {
+    "incremental": true,
+    "composite": false,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "inlineSources": false,
+    "isolatedModules": true,
+    "moduleResolution": "node",
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "preserveWatchOutput": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "alwaysStrict": true,
+    "declaration": true,
+    "declarationMap": true,
+    "strictNullChecks": true,
+    "noUncheckedIndexedAccess": true,
+    "disableReferencedProjectLoad": true,
+    "disableSourceOfProjectReferenceRedirect": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
